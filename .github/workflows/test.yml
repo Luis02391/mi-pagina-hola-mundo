@@ -17,8 +17,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Instalar dependencias
+      - name: Instalar dependencias principales
         run: npm install
+
+      - name: Instalar Jest
+        run: npm install --save-dev jest
+
+      - name: Instalar jsdom
+        run: npm install --save-dev jsdom
 
       - name: Ejecutar pruebas
         run: npx jest
