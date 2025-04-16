@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config para animaciones personalizadas -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out both',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-800 via-slate-900 to-black text-white font-sans">
+
+  <!-- Header -->
+  <header class="p-6 bg-black bg-opacity-50 backdrop-blur-sm shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-cyan-400">DevOps</h1>
+      <nav class="space-x-6 text-gray-300 text-sm">
+        <a href="#about" class="hover:text-cyan-400">¿Qué es DevOps?</a>
+        <a href="#tools" class="hover:text-cyan-400">Herramientas</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="h-[90vh] flex items-center justify-center text-center animate-fadeInUp">
+    <div>
+      <h2 class="text-5xl md:text-6xl font-bold mb-4">Bienvenido DevOps</h2>
+      <p class="text-lg md:text-xl text-gray-300">Automatización, integración continua y despliegues sin miedo</p>
+    </div>
+  </section>
+
+  <!-- Sobre DevOps -->
+  <section id="about" class="py-16 px-6 md:px-0 bg-slate-900 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl font-bold mb-4 text-cyan-300">¿Qué es DevOps?</h3>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        DevOps es una metodología que une el desarrollo de software (Dev) con las operaciones de TI (Ops).
+        Promueve una cultura de colaboración, automatización, integración continua y entrega rápida.
+      </p>
+    </div>
+  </section>
+
+  <!-- Herramientas -->
+  <section id="tools" class="py-16 px-6 bg-slate-800">
+    <h3 class="text-3xl font-bold text-center mb-12 text-cyan-300">Herramientas de DevOps</h3>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-slate-700 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-white mb-2">Docker</h4>
+        <p class="text-gray-300">Contenedores para desarrollo y despliegue eficiente.</p>
+      </div>
+      <div class="bg-slate-700 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-white mb-2">Jenkins</h4>
+        <p class="text-gray-300">Integración y entrega continua de manera automática.</p>
+      </div>
+      <div class="bg-slate-700 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-white mb-2">Kubernetes</h4>
+        <p class="text-gray-300">Orquestación de contenedores a gran escala.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 DevOps. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
